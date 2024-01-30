@@ -1,0 +1,47 @@
+@media screen and (max-width: 1010px) {
+    .hamburglar {
+        display: block;
+        &.is-open ~ .header__nav-menu {
+            height: 200px;
+            transition-duration: 0.5s;
+            padding: 20px;
+        }
+    }
+
+    .header {
+        position: absolute;
+        background-color: #00000059;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .wrapper {
+            border-bottom: transparent;
+        }
+        &__logo {
+           color: #fff;
+        }
+    
+        &__nav-menu {
+            position: absolute;
+            overflow: hidden;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            height: 0;
+            background-color: #181717fc;
+            .nav-menu-list {
+                flex-direction: column;
+
+                &__item {
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+}

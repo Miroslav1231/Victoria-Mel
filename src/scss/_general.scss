@@ -1,0 +1,87 @@
+@import "_adaptive-mixin.scss";
+
+$h1_font_size_px_max: 40;
+$h1_font_size_px_min: 30;
+
+$h2_font_size_px_max: 36;
+$h2_font_size_px_min: 24;
+
+$h3_font_size_px_max: 30;
+$h3_font_size_px_min: 20;
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;    
+}
+
+.wrapper {
+    height: 100%;
+    @include adaptive_property(
+        $property: "width", 
+        $maxSize: 1280, 
+        $minSize: 300, 
+        $containerMaxWidth: 1920
+    );
+    margin: 0 auto;
+}
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+h1 {
+    @include adaptive_property(
+        $property: "font-size", 
+        $maxSize: $h1_font_size_px_max, 
+        $minSize: $h1_font_size_px_min, 
+        $containerMaxWidth: 1920
+    );
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+a, p {
+}
+
+
+h2 {
+    @include adaptive_property(
+        $property: "font-size", 
+        $maxSize: $h2_font_size_px_max, 
+        $minSize: $h2_font_size_px_min, 
+        $containerMaxWidth: 1920
+    );
+}
+
+h3 {
+    @include adaptive_property(
+        $property: "font-size", 
+        $maxSize: $h3_font_size_px_max, 
+        $minSize: $h3_font_size_px_min, 
+        $containerMaxWidth: 1920
+    );
+}
+
+button, input[type=submit], .button-link {
+    cursor: pointer;
+    width: max-content;
+    padding: 20px 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #272727;
+    color: #fff;
+    box-shadow: 0px 3px 6px 0px #00000061;
+}
