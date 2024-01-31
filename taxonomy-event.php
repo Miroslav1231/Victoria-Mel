@@ -17,29 +17,11 @@ $event = get_term( get_queried_object_id() ); // get current term
     <section class="event-images">
       <div class="wrapper">
         <div class="images">
+          <?php 
+          
+          ?>
           <div class="images__item">
               <img src="assets/images/about_event.png" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/about_event.png" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/about_event.png" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/test.jpg" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/photographer.png" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/about_personal.png" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/about_event.png" alt="">
-          </div>
-          <div class="images__item">
-              <img src="assets/images/about_personal.png" alt="">
           </div>
         </div>
       </div>
